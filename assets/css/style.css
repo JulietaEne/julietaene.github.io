@@ -103,18 +103,20 @@ pre code {
 body {
 	background-color: #000;
 	color: #fff;
+	margin: 0;
+	padding: 0;
 }
 
 /**/
 
 .container{
-	max-width: 90%;
+	max-width: 100%;
 	margin: 0 auto;
 }
 
 .header-logo {
 	width: 60px;
-	position: fixed;
+	position: absolute;
 	left: 20px;
 	top:  20px;	
 }
