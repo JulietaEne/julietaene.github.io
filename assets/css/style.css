@@ -107,15 +107,16 @@ body {
 
 /**/
 
+.container{
+	max-width: 100%;
+	margin: 0 auto;
+}
+
 .header-logo {
-	overflow: hidden;
-	width: auto;
+	width: 60px;
 	position: fixed;
 	left: 20px;
-	top:  20px;
-	z-index: 10;
-	pointer-events: none;
-	mix-blend-mode: difference;
+	top:  20px;	
 }
 
 main{
@@ -151,7 +152,7 @@ main{
 	height: 100%;
 	width: 20px;
 	position: relative;
-	right: 5.2%;
+	right: 5.3%;
 	z-index: 1;
 }
 
