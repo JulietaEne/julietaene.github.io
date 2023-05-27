@@ -242,8 +242,9 @@ align-items: center;
 
 .section-footer{
 	display: flex;
-	justify-content: space-around;
-	background-color: red;
+	justify-content: space-between;
+	margin: 0 10%;
+
 }
 
 .section-footer img{
