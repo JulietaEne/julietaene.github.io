@@ -11,9 +11,11 @@
     --light-grey:#4b4b4a;
     --dark-grey:#303030;
 
+    --xs: 0.8rem; /*para lineas*/
     --sm: 1.05rem; /*para textos*/
     --md: 2rem; /*para destacados*/
     --lg: 3rem;/*para titulos*/
+    
 
     --barlow-ligth: 200;
     --barlow-medium: 300;
@@ -24,6 +26,7 @@
     --text-spacing-bg: 2rem;
     --text-spacing-md: 0.8rem;
     --text-spacing-sm: 0.2rem;
+    
 }
 
 img{
@@ -119,12 +122,11 @@ header .logo-block .header-logo_img{
 
 .main-content .column-left .specialties-list{
 
-    margin-right: 5%;
+    margin-right: 21.3%;
     margin-bottom: 20%;
 }
 
 .main-content .column-left .specialties-list li{
-    margin-right: 15%;
     display: grid;
     justify-items: end;
     align-items: center;
@@ -178,20 +180,22 @@ header .logo-block .header-logo_img{
 .footer-content button {
     background: transparent; /* Establece el fondo del botón como transparente */
     border: none; /* Elimina el borde del botón */
-  }
+    
+}
   
   .footer-content button a {
     display: flex;
     text-decoration: none; /* Elimina la decoración de texto */
     color:var(--light-grey); /* Hereda el color del texto del elemento padre */
-    font-size: var(--sm);
+    font-size: var(--xs);
+    place-items: center;
 }
   
-  .footer-content button img {
+.footer-content button a img {
     max-width: 1rem; /* Ajusta el tamaño máximo de la imagen */
-    margin-bottom: 5px; /* Agrega un espacio entre la imagen y el texto */
     background-color: var(--light-grey);
     padding: 3px;
     border-radius: 50%;
     margin-right: var(--text-spacing-sm);
-  }
+}
+
