@@ -50,7 +50,7 @@ button {
 a {
 	color: inherit;
 }
-
+	
 a:hover {
 	text-decoration: none;
 }
@@ -126,13 +126,13 @@ body {
 	align-items: center;
 	justify-items: center;
 	border-radius: 60%;
-
+	
 }
 
 .letter img{
 	width: 22px;
 	margin: 35% 43%;
-
+	
 }
 
 .letter:hover{
@@ -148,7 +148,7 @@ body {
 }
 
 main{
-
+	
 	display: flex;
 	height: 800px;
 }
@@ -156,7 +156,7 @@ main{
 .column-left{
 	max-height: 100%;
 	margin-left: 25%;
-
+	
 }
 
 .desktop-width-600{
@@ -232,9 +232,9 @@ main{
 	text-align: end;
 	color: var(--light-grey);
 	text-transform: uppercase;
-
+	
 }
-
+  
 .button-item {
 display: flex;
 align-items: center;
@@ -260,21 +260,23 @@ align-items: center;
 	font-size: 0.8rem;
 }
 
-
-
-
+  
+  
+  
 
 /*.text-stroke-white {
 	color: transparent;
 	-webkit-text-stroke: 1px;
 	-webkit-text-stroke-color: #fff;
 }
+
 .text-stroke-white:hover {
 	color: white;
 	text-transform: upercase;
 	position: relative;
 	display: inline-block;
 }
+
 .white-text{
 color: white;
 text-transform: upercase;
@@ -284,25 +286,34 @@ display: inline-block;
 	font-size: 46px;
 	font-weight: 700;
 	line-height: 1.2;
+
 .white-text:hover{
 color: transparent;
 -webkit-text-stroke: 1px;
 -webkit-text-stroke-color: #fff;
 }
+
+
+
+
+
 .headline-l {
 	font-family: 'Lato', sans-serif;
 	font-size: 62px;
 	font-weight: 700;
 	line-height: 1.2;
 }
+
 .headline-uppercase {
 	letter-spacing: 3px;
 	text-transform: uppercase;
 }
+
 .main-content {
 	overflow: hidden;
 	position: relative;
 }
+
 .d-inline-block {
 	display: inline-block;
 }*/
