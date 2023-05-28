@@ -1,0 +1,197 @@
+/*==INDICE============
+**** 1- general settings
+**** 2- document settings
+*/
+
+
+/*****-- GENERARL SETTINGS--*****/
+:root{
+    --white:#dadada;
+    --black:#000000;
+    --light-grey:#4b4b4a;
+    --dark-grey:#303030;
+
+    --sm: 1.05rem; /*para textos*/
+    --md: 2rem; /*para destacados*/
+    --lg: 3rem;/*para titulos*/
+
+    --barlow-ligth: 200;
+    --barlow-medium: 300;
+    --barlow-black: 400;
+
+    --letter-spacing: 0.1rem;
+
+    --text-spacing-bg: 2rem;
+    --text-spacing-md: 0.8rem;
+    --text-spacing-sm: 0.2rem;
+}
+
+img{
+    width: 3rem;
+}
+
+html{
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    background-color: var(--black);
+    font-family: 'Barlow Condensed', sans-serif;
+    color: white;
+}
+
+li{
+    list-style: none;
+}
+
+button{
+    all: unset;
+}
+
+
+/*****-- DOCUMENT SETTINGS--*****/
+/*<!-- body-content -->*/
+.body-content{
+    height: 100vh;
+    width: 100%;
+}
+
+.body-content .letter-icon img{
+    width: 1.3rem;
+    margin-top: 2px;
+    padding: 5px;
+}
+
+.body-content .letter-icon{
+    background-color: var(--light-grey);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    bottom: 7%;
+    right: 7%;
+}
+
+.body-content .letter-icon:hover{
+    background-color: var(--dark-grey);
+    /*luego podríamos agregar animaciones*/
+}
+
+
+/*<!-- header -->*/
+
+header .logo-block{
+    position: absolute;
+    top: 3%;
+    left: 2%;
+
+}
+
+header .logo-block .header-logo_img{
+    width: 4rem;
+
+}
+
+/*<!-- main -->*/
+
+.main-content .column-right{
+    display: none;
+}
+
+.main-content .column-left{
+    display: grid;
+    place-items:end;
+    height: 90vh;
+    font-size: var(--md);
+    font-weight: var(--barlow-medium);
+    letter-spacing: var(--letter-spacing);
+}
+
+/*.main-content .column-left:nth-child(2){
+    background-color: blue;
+    display: flex;
+    height: 90vh;
+    width: 90px;
+}*/
+
+.main-content .column-left .specialties-list{
+
+    margin-right: 5%;
+    margin-bottom: 20%;
+}
+
+.main-content .column-left .specialties-list li{
+    margin-right: 15%;
+    display: grid;
+    justify-items: end;
+    align-items: center;
+    grid-template-columns: 25rem 1fr;
+    margin-top: var(--text-spacing-bg);
+    position: relative;
+}
+
+.main-content .column-left ul .diamond{
+    width: 15px;
+    height: 15px;
+    transform: rotate(45deg);
+    border: 0.15rem solid var(--light-grey);
+    background-color: var(--black);
+    border-radius: 3%;
+    margin-left: 1.5rem;
+    z-index: 2;
+}
+
+.main-content .column-left .div-line{
+    display: flex;
+    height: 100%;
+    width: 20px;
+    position: absolute;
+    right: 5%; /*HAY QUE IR CAMBIANDO CON LOS MEDIAQUERY*/
+    z-index: 1;
+}
+
+.main-content .column-left .div-line .vertical-line{
+    background-color: var(--dark-grey);
+    width: 0.05rem;
+    border-style: none;
+}
+
+.main-content .column-left .text{
+    font-size: var(--sm);
+    color: var(--light-grey);
+}
+
+
+/*<!-- footer -->*/
+.footer-content{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 50px;
+    height: 8vh;
+}
+
+.footer-content button {
+    background: transparent; /* Establece el fondo del botón como transparente */
+    border: none; /* Elimina el borde del botón */
+  }
+  
+  .footer-content button a {
+    display: flex;
+    text-decoration: none; /* Elimina la decoración de texto */
+    color:var(--light-grey); /* Hereda el color del texto del elemento padre */
+    font-size: var(--sm);
+}
+  
+  .footer-content button img {
+    max-width: 1rem; /* Ajusta el tamaño máximo de la imagen */
+    margin-bottom: 5px; /* Agrega un espacio entre la imagen y el texto */
+    background-color: var(--light-grey);
+    padding: 3px;
+    border-radius: 50%;
+    margin-right: var(--text-spacing-sm);
+  }
