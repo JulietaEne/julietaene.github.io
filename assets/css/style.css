@@ -145,7 +145,7 @@ main .content-specialties .div-line{
     height: 100%;
     width: 20px;
     position: relative;
-    right: 5.1%;
+    right: 5%;
     z-index: 1;
 	place-content: center;
 }
@@ -195,10 +195,9 @@ main .ul-specialities .list-item-text .text{
 	height:4rem; 
     width: 320px;
     justify-content:flex-end;
-	
     font-size: var(--sm);
-    font-weight: --barlow-black;
-    letter-spacing: var(--text-spacing-sm);
+    font-weight: var(--barlow-medium);
+
     text-align: end;
     color: var(--light-grey);
     /*text-transform: uppercase;
