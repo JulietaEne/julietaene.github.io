@@ -1,10 +1,10 @@
 /*==INDICE============
-**** 1- general settings
-**** 2- document settings
+**** 1. general settings
+**** 2. document settings
 */
 
 
-/*****-- GENERARL SETTINGS--*****/
+/*****1. GENERARL SETTINGS *****/
 
 :root{
     --white:#dadada;
@@ -29,7 +29,6 @@
     --text-spacing-sm: 0.2rem;
 
 	--font-barlow: 'Barlow Condensed';
-    
 }
 
 html {
@@ -68,22 +67,20 @@ a{
 }
 
 
-/**/
+/***** 2. DOCUMENT SETTINGS *****/
 .container{
 	max-width: 100vw;
 	max-height: 100vh;
-
-	/*background-color: red;*/
 }
 
 .icon-letter img {
-	width: var(--sm);
-	margin-bottom: 1px;
+	width: var(--md);
+	margin-top: 2px;
 }
 
 .icon-letter {
-	height: var(--md);
-	width: var(--md);
+	height: var(--lg);
+	width: var(--lg);
 	border-radius: 50%;
 	background-color: var(--light-grey);
 	display: flex;
@@ -97,6 +94,10 @@ a{
 
 .icon-letter:hover{
     background-color: var(--dark-grey);
+}
+
+.icon-letter:focus{
+	background-color: var(--dark-grey);
 }
 
 /* header */
