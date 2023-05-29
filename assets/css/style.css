@@ -16,6 +16,7 @@
     --sm: 1.05rem; /*para textos*/
     --md: 1.8rem; /*para destacados*/
     --lg: 3rem;/*para titulos*/
+	--xl: 4rem;
     
 
     --barlow-ligth: 200;
@@ -98,6 +99,8 @@ a{
 
 .icon-letter:focus{
 	background-color: var(--dark-grey);
+	height: var(--xl);
+	width: var(--xl);
 }
 
 /* header */
@@ -229,6 +232,11 @@ footer .buttons a{
 	font-size: var(--xs);
 	color: var(--light-grey);
 	/*height: 2rem;*/
+}
+
+footer .buttons a:focus{
+	color: var(--white);
+	font-size: var(--sm);
 }
 
 footer .buttons a img{
