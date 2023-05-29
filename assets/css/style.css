@@ -14,7 +14,7 @@
 
     --xs: 0.8rem; /*para lineas*/
     --sm: 1.05rem; /*para textos*/
-    --md: 2rem; /*para destacados*/
+    --md: 1.8rem; /*para destacados*/
     --lg: 3rem;/*para titulos*/
     
 
@@ -92,7 +92,7 @@ a{
 
 	position: fixed;
 	right: 2rem; 
-	bottom: 1rem; 
+	bottom: 2rem; 
 }
 
 .icon-letter:hover{
@@ -152,7 +152,7 @@ main .content-specialties .div-line{
 
 main .content-specialties .div-line hr{
 	height: 100%;
-	border: var(--dark-grey) solid 1px;
+	border: var(--dark-grey) solid 0.5px;
 }
 
 main .content-specialties .ul-specialities .list-item{
@@ -224,7 +224,6 @@ footer .buttons{
 }
 
 footer .buttons a{
-
 	display: flex;
 	justify-items: center;
 	font-size: var(--xs);
@@ -241,9 +240,10 @@ footer .buttons a img{
 	margin-right: var(--text-spacing-sm);
 }
 
-
 footer p{
 	display: inline-block;
 	text-align: center;
 	color: var(--dark-grey);
+	margin: 0 2%;
+	font-size: var(--xs);
 }
