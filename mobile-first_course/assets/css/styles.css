@@ -1,0 +1,522 @@
+/*
+1. Posicionamiento
+2. Modelo de caja (box model)
+3. Tipografía
+4. Visuales
+5. Misceláneas/otros
+*/
+
+:root{
+    /* colores */
+    --bitcoin-orange: #F7931A;
+    --soft-orange: #FFE9D5;
+    --secondary-blue: #1A9AF7;
+    --soft-blue: #E7F5FF;
+    --black: #201E1C;
+    --warm-black: #201E1C;
+    --warm-black2:#282623;
+    --grey: #BABABA;
+    --off-white: #FAF8F7;
+    --just-white: #ffffff;
+    
+
+    --sm: 1.2rem;
+    --md:1.4rem;
+    --md2: 1.8rem;
+    --lg: 2.4rem; /*24 px*/
+    --bg: 3rem;
+
+    --margin-sides: 16px;
+    --margin-top: 24px;
+
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'DM Sans', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    width: 100vw;
+}
+
+header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 320px;
+    height: 334px;
+    text-align: center;    
+    background-color: /*linear-gradient(207.8deg, var(--warm-dark) 16.69%, var(--bitcoin-color) 100%)*/black;
+
+}
+
+header .header--logo{
+    width: 150px;
+    height: 24px;
+    align-self: center;
+    margin-top: 60px;
+}
+
+.header--title-container{
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.header--title-container h1{
+    align-self: center;
+    text-align: center;
+    font-size: var(--lg);
+    margin: 0 var(--margin-sides);
+    color: white;
+    line-height: 26px;
+}
+
+.header--title-container p{
+    margin-top: var(--margin-top);
+    align-self: center;
+    text-align: center;
+    max-width: 80%;
+    color: var(--soft-orange);
+    font-size: var(--sm);
+}
+
+.header--title-container .header--button{
+    position:absolute;
+    left: calc(50% - 118px); /*calcula al centro (50%) pero como el boton es grande, le restamos mas o menos la mitad del boton*/
+    top: 286px; 
+    display:block;
+    margin-top: 32px;
+    padding: 15px;
+    width: 229px;
+    height: 48px;
+    background-color: var(--off-white);
+    /*background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);*/
+    font-size: var(--md);
+    color: var(--black);
+    
+    /*align-self: center;
+    display: flex;
+    justify-content: space-evenly;
+    */
+    /* Sombra /Blanco */
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    border-radius: 2px;
+}
+
+.header--button span{
+    display: inline-block;
+    width: 13px;
+    height: 8px;
+    margin-left: 10px;
+    /*background-image: url('assets/icons/Vector.png');*/
+}
+
+main{
+    width: 100%;
+    height: auto;
+    background-color: var(--off-white);
+}
+
+.main-exchange-container{
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.main-exchange-container .backgroundImg{
+
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    background-image: url("./assets/img/bitcoinbaby.png");
+    background-size: cover; /*para que no se deforme*/
+    background-position: center; /*para que se quede siempre al centro*/
+    background-repeat: no-repeat; /*porq si la img es más chica del contenedor, se va a repetir para cubrir el cont. ASí hacemos que se estire sin romperse*/
+}
+
+.main-exchange-container--title{
+    width: 90%;
+    min-width: 288px; 
+    max-width: 900px;
+    margin: 0 auto; /*hace que se posicione siempre al centro ya que ocupa solo 90%*/
+    font-size: var(--md);
+    line-height: 2.6rem;
+}
+
+.main-exchange-container--title p{
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: var(--md);
+    line-height: 1.8rem;  
+    margin-top: 24px;
+    color: #757575; 
+}
+
+.main-currency-table{
+    width: 70%;
+    min-width: 235px;
+    max-width: 500px;
+    height: 360px;
+    margin: 0 auto;
+    font-family: "Inter", sans-serif;
+}
+
+.main-currency-table .currency-table--title{
+    font-size: var(--margin-sides);
+    font-family: 'DM Sans';
+    font-weight: bold;
+    line-height: 2.3rem;
+    color: var(--bitcoin-orange);
+    text-align: left;
+    padding: 1rem;
+}
+
+.currency-table--container{
+    width: 90%;
+    min-width: 230px; 
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.currency-table--container table{
+    width: 100%;
+    height: 100%;
+}
+
+.currency-table--container td{
+    width: 50%;
+    line-height: 1.9rem;
+    font-size: var(--sm);
+    color: var(--grey);
+    background-color: var(--just-white);
+    height: 39px;
+    font-weight: 500;
+}
+
+.currency-table--container .table__top-left{
+    border-radius:8px 0 0 0;
+}
+.currency-table--container .table__top-right{
+    border-radius:0 8px 0 0;
+}
+.currency-table--container .table__bottom-right{
+    border-radius:0 0 8px 0;
+}
+.currency-table--container .table__bottom-left{
+    border-radius: 0 0 0 8px;
+}
+
+.currency-table--container .table-right{
+    font-size: var(--md);
+    font-weight: 300;
+    line-height: 1.7rem;
+    color: #757575;
+}
+
+.currency-table--container td span{
+    margin-left: 1rem;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+}
+
+.currency-table--date{
+    background-color: var(--soft-orange);
+    width: 173px;
+    height: 31px;
+    margin: 16px auto 0;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.currency-table--date p{
+    margin-top: 2px; 
+    color: var(--warm-black);
+    font-weight: 300;
+}
+
+.currency-table--date p b{
+    font-weight: 400;
+    color: black;
+}
+
+.main-product-detail{
+    background-color: var(--warm-black);
+    position: relative; 
+    width: 100%;
+    margin-top: -50px;
+    min-width: 320px; 
+    height: auto;
+    padding: 60px 5px;/*arriba-abajo // izquiera/derecha*/
+}
+
+.product-detail--batata-logo{
+    position: absolute;/*cuando colocamos absolute, el elemento va a buscar al primer elemento padre que sea RELATIVE.
+    Si su padre directo no lo tiene, va a salir al primero que lo tenga (puede ser main u otra etiqueta, y genera un comportamiento raro)*/
+    /*a su vez, hace que no ocupe el espacio en layout*/
+    width: 40px;
+    height: 25px;
+    top: -10px; 
+    left: calc(50% - 20px);
+}
+
+.product-detail--title{
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+}
+ 
+.product-detail--title h2{
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+    color: var(--just-white);
+}
+
+.product-detail--title p{
+    margin-bottom: 32px;
+    font-size: var(--md);
+    color: #808080;
+}
+
+.product-detail--card{
+    background-color: var(--warm-black2);
+    width: 90%;
+    min-width: 288px; 
+    max-width: 400px;
+    min-height: 150px; 
+    margin: 16px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+}
+
+.product-detail--card .imagen/*.clock*/{
+    display: inline-block;
+    margin-bottom: 5px;
+    /* esto cuando usamos una imagen cargada desde background-img
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;*/
+}
+
+.product-detail--card /*.clock*/.imagen img{
+    width: 30px;
+    height: 30px;
+}
+
+.product--card-title{
+    margin-bottom: 10px;
+    font-size: var(--md2);
+    color: var(--just-white);
+    font-weight: bold;
+}
+
+.product--card-body{
+    font-size:var(--md);
+    color: #808080;
+}
+
+.bitcoin-img-container{
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    position: relative;
+
+}
+
+.bitcoin-img-container h2{
+    position: absolute;
+    margin-top: 64px;
+    margin-left: calc(50% - 85px);
+    font-size: var(--lg);
+    color: var(--just-white);
+    font-weight: 700;
+
+}
+
+.bitcoin-img-container img{
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.main-plans-container{
+    width: 100%;
+    min-width: 2.4rem; 
+    padding-bottom: 70px;
+    text-align: center;
+    background-color: var(--off-white);
+}
+
+.plans--title{
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 0 auto;
+
+}
+
+.plans--title h2{
+    margin-top: 50px;
+    font-size: var(--lg);
+    line-height: 2.6rem;
+    color: var(--warm-black);
+    font-weight: bold;
+}
+
+.plans--title p{
+    padding-top: 30px;
+    font-size: var(--md);
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #757575;
+}
+
+.plans-container--slider{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    height: 316px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    padding: 0 25px;
+}
+
+/*.planes-container--slider::-webkit-scrollbar {
+    background-color: var(--soft-orange);
+    height: 3px;
+  }
+  .planes-container--slider::-webkit-scrollbar-thumb {
+    background-color: var(--bitcoin-orange);
+  }*/
+
+.plans-container--card{
+    background-color: var(--just-white);
+    position: relative;
+    scroll-snap-align: center; /*centra en el elemento (la tarjeta) cuando hacemos el scroll*/
+    width: 60%;
+    min-width: 190px;
+    max-width: 300px;
+    min-height: 247px;
+    height: auto;
+    margin: 50px auto 0;
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    border-radius: 8px;
+    padding: 10px 15px;
+    padding-top: 30px;
+}
+
+.recommended{
+    position: absolute;
+    color: var(--just-white);
+    width: 100px;
+    height: 31px;
+    padding: 6px;
+    top: -15px;
+    left: calc(50% - 50px);
+    font-size: var(--sm);
+    border-radius: 8px;
+    background-color: var(--bitcoin-orange);
+}
+
+.plan-card--title{
+    color: var(--black);
+    font-size: var(--md);
+    font-weight: 500;
+}
+
+.plan-card--price{
+    padding: 5px 0;
+    font-size: 5.2rem;
+    font-weight: bold;
+    line-height: 6.3rem;
+}
+
+.plan-card--price span{
+    font-size: var(--sm);
+    font-weight: 300;
+    margin-right: -5px; 
+    vertical-align: text-top; 
+}
+
+.plan-card--saving{
+    font-size: var(--sm);
+    padding: 8px;
+    color: #757575;
+    margin-bottom: 16px;
+}
+
+.plan-card--cta{
+    width: 150px;
+    height: 48px;
+    background-color:var(--off-white);
+    border: 2px solid var(--bitcoin-orange);
+    border-radius: 4px;
+    font-family: "DM Sans", sans-serif;
+    font-size: var(--md);
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--warm-black);
+}
+
+.plan-card--cta span img{
+    height: 24px;
+    width: auto;
+    vertical-align: text-bottom;
+    margin-bottom: -4px;
+}
+
+footer{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: var(--bitcoin-orange);
+}
+
+footer section{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer--left ul{
+    font-size: var(--md);
+    line-height: 1.8rem;
+    list-style: none;
+}
+
+.footer--left li{
+    margin: 10px 0;
+}
+
+.footer--left a{
+    text-decoration: none;
+    color: var(--just-white);
+}
+
+/**MEDIA QUERY **/
