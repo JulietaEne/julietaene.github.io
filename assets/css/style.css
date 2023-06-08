@@ -12,11 +12,11 @@
     --light-grey:#4b4b4a;
     --dark-grey:#303030;
 
-    --xs: 0.8rem; /*para lineas*/
-    --sm: 1.05rem; /*para textos*/
-    --md: 1.8rem; /*para destacados*/
+    --xs: 1.2rem; /*para lineas*/
+    --sm: 1.6rem; /*para textos*/
+    --md: 2.1rem; /*para destacados*/
     --lg: 3rem;/*para titulos*/
-	--xl: 4rem;
+	--xl: 4.8rem;
     
 
     --barlow-ligth: 200;
@@ -26,8 +26,9 @@
     --letter-spacing: 0.1rem;
 
     --text-spacing-bg: 2rem;
-    --text-spacing-md: 0.8rem;
-    --text-spacing-sm: 0.2rem;
+    --text-spacing-lg: 0.8rem;
+	--text-spacing-md:0.3rem;
+    --text-spacing-sm: 0.1rem;
 
 	--font-barlow: 'Barlow Condensed';
 }
@@ -35,7 +36,7 @@
 html {
 	margin:  0;
 	padding: 0;
-	font-size: 16px;
+	font-size: 62.5%;
 }
 
 body {
@@ -69,21 +70,21 @@ a{
 
 
 /***** 2. DOCUMENT SETTINGS *****/
-.container{
-	max-width: 100vw;
-	max-height: 100vh;
+body{
+	width: 100vw;
+	height: 100vh;
 }
 
-.icon-letter img {
+.body--icon-letter img {
 	width: var(--md);
 	margin-top: 2px;
 }
 
-.icon-letter {
-	height: var(--lg);
+.body--icon-letter {
 	width: var(--lg);
-	border-radius: 50%;
+	height: var(--lg);
 	background-color: var(--light-grey);
+	border-radius: 50%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -93,11 +94,11 @@ a{
 	bottom: 2rem; 
 }
 
-.icon-letter:hover{
+.body--icon-letter:hover{
     background-color: var(--dark-grey);
 }
 
-.icon-letter:focus{
+.body--icon-letter:focus{
 	background-color: var(--dark-grey);
 	height: var(--xl);
 	width: var(--xl);
@@ -106,45 +107,53 @@ a{
 /* header */
 .header-logo {
     position: absolute;
-    left: 1rem;
-    top:  2rem; 
+    left: 4%;
+    top:  3%; 
 }
 
 .header-logo img{
     width: 4rem;
+	min-width: 50px;
 }
 
 /* main */
 main{
     display: flex;
-    height: 80vh;
+    height: 85vh;
+	min-height: 350px;
 
 }
 
-main .column-right{
+.main--desktop-column-right{
     display: none;
 }
 
-main .column-left{
+.main--column-left{
 	display: inherit;
     max-height: 100%;
     width: 100vw; /*cuando haga desktop, tiene que achicarse
 	background-color: blueviolet;*/
 	justify-content: flex-end;
+	margin-right: 5%;
+
 }
 
-main .column-left .content-specialties{
+.column-left--content-specialties{
     display: flex;
     align-items: center;
 }
 
-main .column-left .content-specialties .ul-specialities{
+.main--column-left  h2{
+	display: none;
+}
+
+.column-left--content-specialties .ul-specialities{
     z-index: 2;
-	margin-top: 50%;
+	margin-top: 45%;
 	/*background-color: red;*/
 }
 
-main .content-specialties .div-line{
+.column-left--content-specialties .div-line{
     display: flex;
     height: 100%;
     width: 20px;
@@ -154,14 +163,15 @@ main .content-specialties .div-line{
 	place-content: center;
 }
 
-main .content-specialties .div-line hr{
+.column-left--content-specialties .div-line hr{
 	height: 100%;
-	border: var(--dark-grey) solid 0.5px;
+	border: var(--dark-grey) solid 0.1px;
 }
 
-main .content-specialties .ul-specialities .list-item{
+.column-left--content-specialties .ul-specialities .list-item{
 	display: flex;
     align-items: center;
+	margin-bottom: 1rem;
 	/*border: orange solid 2px;*/
 }
 
@@ -172,15 +182,16 @@ main .ul-specialities .list-item .list-text {
 	/*border: white solid 1px;*/
 	width: 320px;
     justify-content:flex-end;
-    margin-right: var(--text-spacing-sm);
+    margin-right: var(--text-spacing-lg);
     
 	font-family: 'Barlow Condensed';
     font-weight: 300;
 	font-size: var(--md);
 	font-weight: var(--barlow-black);
-    letter-spacing: var(--text-spacing-sm);
+    letter-spacing: var(--text-spacing-md);
     color: var(--white);
 	-webkit-font-smoothing:antialiased;
+
 	/*background-color: orange;*/
 }
 
@@ -204,6 +215,7 @@ main .ul-specialities .list-item-text .text{
 
     text-align: end;
     color: var(--light-grey);
+
     /*text-transform: uppercase;
   	background-
 	color: red;*/
@@ -211,28 +223,27 @@ main .ul-specialities .list-item-text .text{
 
 
 /* footer */
-.container footer{
+footer{
 	height: 15vh;
 	margin-top: 5%;
 	align-content: center;
-	
+	height: auto;
 	/*justify-content: space-around;
     flex-wrap: wrap;*/
-	
 }
 
 footer .buttons{
 	display: flex;
 	justify-content: space-around;
-	height: 1rem;
+	height: auto;
 }
 
 footer .buttons a{
 	display: flex;
-	justify-items: center;
 	font-size: var(--xs);
 	color: var(--light-grey);
-	height: 1rem;
+	height: auto;
+	align-items: center;
 }
 
 footer .buttons a:focus{
@@ -241,18 +252,20 @@ footer .buttons a:focus{
 }
 
 footer .buttons a img{
-    width: 12px;
 	height: 12px;
+    width: 12px;
     background-color: var(--light-grey);
     padding: 3px;
     border-radius: 50%;
 	margin-right: var(--text-spacing-sm);
 }
 
-footer p{
-	display: inline-block;
+footer span{
+	display: flex;
 	text-align: center;
-	color: var(--dark-grey);
-	margin: 0 2%;
+	color: var(--light-grey);
+	margin: 0 17%;
 	font-size: var(--xs);
+	justify-content: center;
+	align-items: center;
 }
