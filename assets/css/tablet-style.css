@@ -13,7 +13,12 @@
     flex-direction: column;
     font-size: var(--xl);
     font-weight: 900;
-    margin-bottom:  3rem;
+    margin-bottom:  1rem;
+}
+
+.main--desktop-column-right h2{
+    font-weight: var(--barlow-ligth);
+    letter-spacing: var(--text-spacing-sm);
 }
 
 .main--desktop-column-right h1 .text-stroke-white .white-text{
@@ -41,7 +46,7 @@ main .main--desktop-column-right h1 .text-stroke-white{
 }
 
 .column-left--content-specialties .ul-specialities{
-    margin-top: 69%;
+    margin-top: 90%;
 
 }
 

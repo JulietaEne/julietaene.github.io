@@ -224,10 +224,13 @@ main .ul-specialities .list-item-text .text{
 
 /* footer */
 footer{
-	height: 15vh;
+	min-width: 320px;
 	margin-top: 5%;
 	align-content: center;
 	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
 	/*justify-content: space-around;
     flex-wrap: wrap;*/
 }
