@@ -12,10 +12,10 @@
     --light-grey:#4b4b4a;
     --dark-grey:#303030;
 
-    --xs: 1.2rem; /*para lineas*/
-    --sm: 1.6rem; /*para textos*/
-    --md: 2.1rem; /*para destacados*/
-    --lg: 3rem;/*para titulos*/
+    --xs: 1.3rem; /*lineas*/
+    --sm: 1.6rem; /*textos*/
+    --md: 2.1rem; /*destacados*/
+    --lg: 3rem; /*titulos*/
 	--xl: 4.8rem;
     
 
@@ -76,7 +76,7 @@ body{
 }
 
 .body--icon-letter img {
-	width: var(--md);
+	width: 2rem;
 	margin-top: 2px;
 }
 
@@ -131,8 +131,7 @@ main{
 .main--column-left{
 	display: inherit;
     max-height: 100%;
-    width: 100vw; /*cuando haga desktop, tiene que achicarse
-	background-color: blueviolet;*/
+    width: 100vw; /****/
 	justify-content: flex-end;
 	margin-right: 5%;
 
@@ -150,8 +149,8 @@ main{
 .column-left--content-specialties .ul-specialities{
     z-index: 2;
 	margin-top: 45%;
-	/*background-color: red;*/
 }
+
 
 .column-left--content-specialties .div-line{
     display: flex;
@@ -172,14 +171,12 @@ main{
 	display: flex;
     align-items: center;
 	margin-bottom: 1rem;
-	/*border: orange solid 2px;*/
 }
 
 main .ul-specialities .list-item .list-text {
     display: flex;
     align-items: center;
     height:4rem; 
-	/*border: white solid 1px;*/
 	width: 320px;
     justify-content:flex-end;
     margin-right: var(--text-spacing-lg);
@@ -191,9 +188,10 @@ main .ul-specialities .list-item .list-text {
     letter-spacing: var(--text-spacing-md);
     color: var(--white);
 	-webkit-font-smoothing:antialiased;
-
-	/*background-color: orange;*/
 }
+
+
+
 
 main .ul-specialities .list-item .diamond {
     width: 12px; 
@@ -215,10 +213,6 @@ main .ul-specialities .list-item-text .text{
 
     text-align: end;
     color: var(--light-grey);
-
-    /*text-transform: uppercase;
-  	background-
-	color: red;*/
 }
 
 
@@ -231,8 +225,6 @@ footer{
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
-	/*justify-content: space-around;
-    flex-wrap: wrap;*/
 }
 
 footer .buttons{
@@ -254,6 +246,11 @@ footer .buttons a:focus{
 	font-size: var(--sm);
 }
 
+footer .buttons a:hover{
+	color: var(--light-grey);
+	font-size: 1.25rem;
+}
+
 footer .buttons a img{
 	height: 12px;
     width: 12px;
@@ -272,3 +269,48 @@ footer span{
 	justify-content: center;
 	align-items: center;
 }
+
+/*=========================================
+*************    PORTFOLIO    *************
+==========================================*/
+.works--main{
+	display: flex;
+	flex-direction: column;
+	height: 80vh;
+}
+
+.works--main h2{
+	margin: 80px 0 0 15px;
+	font-size: var(--lg);
+	font-family: "Lato", sans-serif;
+	color: var(--white);
+}
+
+.works--trabajos-container{
+	display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+	margin: 3% 0 0 5%; 
+}
+
+.works--example{
+    position: relative;
+    scroll-snap-align: center;
+    width: 90%;
+    min-width: 190px;
+    max-width: 300px;
+    min-height: 247px;
+    height: auto;
+   
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    border-radius: 8px;
+    padding: 10px 15px;
+    padding-top: 30px;
+}
+
+.works--trabajos-container::-webkit-scrollbar {
+	display: none;
+  }
