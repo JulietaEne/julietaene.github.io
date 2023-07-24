@@ -176,6 +176,7 @@ main .options ul .mobile_hr-4 {
 
 footer {
   background-color: #2b2b29;
+  padding-bottom: 1rem;
 }
 footer a, footer p {
   color: white;
@@ -190,7 +191,6 @@ footer .footer_content {
   align-items: center;
   width: 90vw;
   margin: auto;
-  padding-bottom: 2rem;
 }
 footer .footer_content svg {
   width: 20px;
@@ -233,4 +233,14 @@ footer .footer_content .right_social-media li {
   align-items: center;
   height: 21vh;
   margin-top: 1.5rem;
+}
+footer .credits {
+  width: 45vw;
+  margin: 1rem auto 1rem;
+}
+footer .credits p, footer .credits a {
+  color: #5f6061;
+}
+footer .credits a:hover {
+  color: #d1d1d1;
 }/*# sourceMappingURL=main.css.map */
